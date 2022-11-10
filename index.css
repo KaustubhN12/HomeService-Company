@@ -202,35 +202,32 @@ body{
     width: 100%;
     display:flex;
    margin-top: 20px;
-   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+
 }
 #bg-img{
-    width: 50%;
-    
+   width: 50%;
+   
 }
 #services-2{
     width: 50%;
-    /* background-color: black; */
+    background-color: black;
     padding-left: 50px;
 }
 #bg-img{
     
-    /* background:  rgba(0, 0, 0, 0.2)
+    background:  rgba(0, 0, 0, 0)
     url(https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep/t_high_res_category/images/growth/home-screen/1615874646690-66ab68.jpeg);
     background-size: cover;
-    background-position:center; */
-    background-image: linear-gradient( to right,
- rgba(0,0,0,0) ,
- rgba(0,0,0,0.5) ,
- rgba(0,0,0,0.8) ,
- rgba(0,0,0,1));
+    background-position:center;
     
 }
 #head2{
-    font-size: 50px;
+    font-size: 40px;
     margin-top: 40px;
     color: whitesmoke;
   font-family: sans-serif;
+  
 }
 #head3{
     color: rgb(167, 167, 167);
@@ -248,6 +245,8 @@ body{
      border-radius: 8px;
      width: 75%;
      background-color: white;
+     margin-top: 100px;
+    
 }
 #grid-service>div>img{
     width:55%;
@@ -271,18 +270,165 @@ body{
 #grid-service>div>p:not(:first-child){
    font-size: 14px;
  }
-
- #gradient-2{
-    background:  rgba(0, 0, 0, 0)
-    url(https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep/t_high_res_category/images/growth/home-screen/1615874646690-66ab68.jpeg);
-    background-size:cover;
-    background-position:center;
-    width: 50%;
- }
-
- 
- /* background-image: linear-gradient( to right,
- rgba(0,0,0,0.2) ,
+#inner-bag{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( to right,
+ rgba(0,0,0,0)50% ,
  rgba(0,0,0,0.5) ,
  rgba(0,0,0,0.8) ,
- rgba(0,0,0,1)); */
+ rgba(0,0,0,1));
+}
+
+/* cleaning and pest control */
+
+#cont{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+#gid-cont{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 60%;
+    margin: auto;
+    height: auto;
+    margin-top: 50px;
+    padding-top: 10px;
+
+}
+#gid-cont>div>img{
+    width: 92%;
+    border-radius: 5px;
+    height: 180px;
+}
+#head5{
+    font-size: 35px;
+}
+
+#gid-cont>div>img:hover{
+    transition: 0.4s;
+    transform:scale(1.05);
+}
+/* images section */
+#insurance>img{
+    width:100%
+}
+  
+#insurance{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 20px;
+}
+/* bottom-section */
+
+#bottomcont{
+    width: 100%;
+    height: 900px;
+    background-color: black;
+}
+ #row-one{
+    width: 85%;
+    margin: auto;
+   padding-top: 30px;
+   text-align: center;
+   display: grid;
+   grid-template-columns: repeat(8,1fr);
+  gap: 5px;
+ }
+ /* #row-one> */
+ #row-one>a{
+    text-decoration: none;
+    color: rgb(205, 205, 205);
+    font-size: 14px;
+    padding-bottom: 10px;
+ }
+ hr{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    background: rgb(100, 99, 99);
+    border: none;
+    height: 1px;
+    margin-bottom: 20px;
+ }
+ #part2{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    padding-left: 13px;
+    margin-bottom: 20px;
+ }
+ #part2>a{
+    text-decoration: none;
+    color: rgb(205, 205, 205);
+    font-size: 14px;
+    margin-right: 20px;
+ }
+ #flex{
+    display: flex;
+ }
+ #flex>a{
+    text-decoration: none;
+    color: rgb(205, 205, 205);
+    font-size: 14px;
+    margin-right: 20px;
+ }
+ #cities{
+    display: grid;
+    grid-template-columns: repeat(11,1fr);
+    margin-top: 25px;
+    gap: 17px;
+    text-align: center;
+    width: 70%;
+    margin-bottom: 20px;
+ }
+ #cities>a{
+    text-decoration: none;
+    color: rgb(205, 205, 205);
+    font-size: 14px;
+ }
+ #last{
+    margin: auto;
+    margin-bottom: 20px;
+ }
+ #two{
+    display: flex;
+    margin-bottom: 20px;
+ }
+ #last>a{
+    text-decoration: none;
+    color: rgb(205, 205, 205);
+    font-size: 14px;
+    
+ }
+ #two>a{
+    text-decoration: none;
+    color: rgb(205, 205, 205);
+    font-size: 14px;
+    margin-right: 20px;
+ }
+ #last-line{
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    background: rgb(100, 99, 99);
+    border: none;
+    height: 1px;
+    margin-bottom: 20px;
+ }
+ #botoom-last-row>div>img{
+    width: 25%;
+    margin-top: 10px;
+ }
+ #botoom-last-row{
+    display: flex;
+    width: 100%;
+ }
+ #botoom-last-row>div>p{
+   color: whitesmoke;
+ }

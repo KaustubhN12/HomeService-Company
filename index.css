@@ -328,7 +328,7 @@ body{
 
 #bottomcont{
     width: 100%;
-    height: 900px;
+    height: auto;
     background-color: black;
 }
  #row-one{
@@ -428,7 +428,28 @@ body{
  #botoom-last-row{
     display: flex;
     width: 100%;
+    padding: 10px;
+    justify-content: space-evenly;
  }
  #botoom-last-row>div>p{
    color: whitesmoke;
+   margin-left: 20px;
+ }
+ #socialmedia>img{
+     border-radius: 50%;
+ }
+ #socialmedia{
+    display: flex;
+    width: 15%;
+ }
+ #store{
+    display: flex;
+    margin-top: 20px;
+ }
+ #store>div>img{
+    width: 40%;
+ }
+ #store>div{
+    width: 50%;
+    text-align: right;
  }

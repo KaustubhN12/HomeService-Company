@@ -25,11 +25,23 @@
 
          <div id="top-rigth-section">       
          <a href="">Blog</a>           
-         <a href="">Register As A Professional</a>            
-         <a href="">Login/Sign Up</a>
+         <a href="">Register As A Professional</a>   
+         <div id="pop">        
+         <a href="#" class="button">Login/Sign Up</a>
+        </div> 
          </div>      
      </div>
+<!--  -->
+  <div class="popup">
+        <div class="popup-content">
+            <img class="close"src="https://i.ibb.co/kJfXw6S/Screenshot-54.png" alt="close">
+            <img src="https://i.ibb.co/x3XVq49/Untitled-design-2.jpg" alt="">
+            <input class="phone" type="number" placeholder="Your phone number">
+            <a href="./otp.html"  id="otpbutton">SEND OTP</a>
+        </div>
+  </div>
 
+<!--  -->
             <div id="mid-section">
                 <p id="city"> <b> Home &nbsp / &nbsp City</b></p><br>
                 <p id="moto"><b> Home services, on demand.</b></p>
@@ -290,13 +302,30 @@
          </div>
             </div>
 
-
-
-
-
          <div>
 </body>
 </html>
+
+<script>
+    
+     document.querySelector(".button").addEventListener("click",function(){
+         document.querySelector(".popup").style.display="flex";
+     })
+     document.querySelector(".close").addEventListener("click",function(){
+         document.querySelector(".popup").style.display="none";     
+     })
+   let name=localStorage.getItem("name")
+     document.querySelector(".button").innerText=name||"Login/Sign Up"
+    
+    
+</script>
+
+
+
+
+
+
+
 
 
 <!--  <a href="https://ibb.co/nBBHGWv"><img src="https://i.ibb.co/nBBHGWv/Screenshot-46.png" alt="Screenshot-46" border="0"></a>

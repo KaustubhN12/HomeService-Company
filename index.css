@@ -453,3 +453,67 @@ body{
     width: 50%;
     text-align: right;
  }
+
+ /* pop up */
+
+ #pop>a{
+    text-decoration: none;
+    font-family:sans-serif ;
+    color: whitesmoke;
+    font-weight: 600;
+    transition: 0.4s;
+ }
+ #pop>a:hover{
+    color: black;
+ }
+.popup{
+    background:rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+}
+.popup-content{
+    height: auto;
+    width: 500px;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+
+}
+#otpbutton{
+     background: whitesmoke;
+     padding: 10px 15px;
+     color: black;
+     font-weight: bolder;
+     font-size: 20px;
+     margin-top: 25px;
+     text-decoration: none;
+     transition: 0.4s;
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+     display: block;
+
+}
+#otpbutton:hover{
+    background-color: #777;
+}
+.phone{
+    display: block;
+    width: 95%;
+    padding: 10px;
+    margin-top: 30px;
+}
+.close{
+   width: 5%;
+   position: absolute;
+   top: -15px;
+   right: -15px;
+   border-radius: 50%;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   cursor: pointer;
+}

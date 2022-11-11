@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <style>
+        img{
+    display: block;
+    align-items: center;
+    width: auto;
+    margin: auto;
+}
+
+div{
+    width: 35%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    margin: auto;
+    text-align: left;
+    padding-top: 4px;
+    margin-top: 30px;
+}
+h3{
+    text-align: center;
+    font-size: 23px;
+    font-family: sans-serif;
+    
+}
+form {
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 30px;
+  }
+  
+  input[type="password"]{
+ 
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: rgb(37, 99, 235);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 200;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+input[type="submit"]:hover {
+  background-color: green;
+}
+a{
+    color: black;
+}
+
+    </style>
+</head>
+<body>
+    <img src="https://i.ibb.co/x3XVq49/Untitled-design-2.jpg" alt="masai">
+    <div>
+        <h3>Submit OTP</h3>
+        <form>
+            <input id="otp" type="password" placeholder="Enter OTP">
+            <br>
+            <input id="submit" type="submit" value="Confirm"/>
+            <a href="./index.html">Go to home</a>
+             
+          </form>
+    </div>
+</body>
+</html>
+<script>
+      let otp=document.querySelector("#otp")
+      document.querySelector("#submit").addEventListener("click",function(){
+         event.preventDefault()
+          if(otp.value==""){
+            alert("Please enter the OTP")
+          }
+         else if(otp.value=="1234"){
+            alert("login success")
+            localStorage.setItem("name","Kaustubh")
+          }
+          else if(otp.value!="1234"){
+            alert("incorrect OTP")
+          }
+         
+      })
+
+</script>

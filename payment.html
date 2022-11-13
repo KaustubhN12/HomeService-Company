@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <link rel = "icon" href = 
+    "https://i.ibb.co/x3XVq49/Untitled-design-2.jpg" 
+            type = "image/x-icon">
+   <link rel="stylesheet" href="./payment.css">
+</head>
+<body>
+    <div>
+       <img src="https://i.ibb.co/x3XVq49/Untitled-design-2.jpg" alt="">
+       <h3>Fill your details here</h3>
+        <form>
+            <label for="">Full Name</label><br />
+            <input id="Name" type="text" placeholder="Enter your full name" /><br />
+            <label for="">Card Number</label><br />
+            <input id="cardnumber"  type="number" placeholder="Enter Card Number"><br>
+            <label for="">Expriry Date</label><br />
+            <input id="expiry" type="date" placeholder="Enter Date">
+            <br>
+            <label for="">CVV</label><br />
+            <input id="cvv" type="number" placeholder="Enter CVV">
+            <br>
+            <input type="submit" value="Get OTP"/>
+          </form>
+    </div>
+</body>
+</html>
+
+<script>
+    let name = document.querySelector("#Name")
+    let cardnumber = document.querySelector("#cardnumber")
+    let expiry = document.querySelector("#expiry")
+    let cvv = document.querySelector("#cvv")
+document.querySelector("form").addEventListener("submit",payments)
+
+    function payments(event){
+    event.preventDefault()
+    
+    if(name.value==""||cardnumber.value==null||expiry.value==null||cvv.value==null){
+        alert("Please Fill All The Details")
+      }else{
+        let otp=document.createElement("input")
+          otp.setAttribute("type","number")
+          otp.setAttribute("id","pin")
+        let form = document.querySelector("form")
+        let confirm = document.createElement("button")
+            confirm.innerText="Confirm"
+        confirm.setAttribute("id","cnf")
+        form.append(otp,confirm)
+          
+
+     document.querySelector("#cnf").addEventListener("click",function(){
+        
+        let pin = document.querySelector("#pin")
+
+        if(pin.value=="1234"){
+            alert("Payment Successfull!!")
+            let btn = document.querySelector("#cnf")
+            btn.disabled=true
+        }else{
+            alert("Please Enter Correct OTP")
+        }
+        })
+      }
+      
+}
+
+          
+
+</script>

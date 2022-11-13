@@ -1,0 +1,83 @@
+div{
+    width: 35%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    margin: auto;
+    text-align: left;
+    padding-top: 4px;
+    margin-top: 30px;
+}
+h3{
+    text-align: center;
+    font-size: 23px;
+    font-family: sans-serif;
+    
+}
+form {
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 30px;
+  }
+  
+  
+  
+  label {
+    font-size: 20px;
+  }
+  input[type="text"],
+[type="number"],
+[type="date"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: rgb(37, 99, 235);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 200;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+input[type="submit"]:hover {
+  background-color:rgb(74, 131, 255) ;
+  font-weight: 600;
+}
+#login{
+  text-decoration: none;
+  color: rgb(32, 103, 255) ;
+  text-align: center;
+}
+#cnf{
+    background-color: rgb(63, 222, 63);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 200;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#cnf:hover{
+    background-color: rgb(113, 237, 113);
+    font-weight: 700;
+}
+
+div>img{
+   width: 30%;
+   margin-left: 170px;
+}

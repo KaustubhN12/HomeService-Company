@@ -112,6 +112,7 @@ function showservice (data){
 
         let btn = document.createElement("button")
         btn.innerText="Add"
+        btn.setAttribute("id","opacity")
         btn.addEventListener("click",function(){
                 
             let Added=JSON.parse(localStorage.getItem("cart"))||[]
@@ -136,21 +137,11 @@ function showservice (data){
 
 showservice(data1)
 
-
-
-    
-
-
-
-
-
-
-
-
-
 document.querySelector("#openpopup").addEventListener("click",function(){
     document.querySelector(".popup").style.display="flex";
+    document.querySelector("#opacity").style.opacity=0
 })
 document.querySelector(".close").addEventListener("click",function(){
     document.querySelector(".popup").style.display="none";     
+    document.querySelector("#opacity").style.opacity=1
 })

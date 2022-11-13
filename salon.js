@@ -1,5 +1,6 @@
 let data1 = [
-    {
+    {   
+        id:1,
         logo:"https://i.ibb.co/Qn7hYDg/Screenshot-69.png",
         package:"PACKAGE",
         Name:"Wax & Glow",
@@ -13,23 +14,69 @@ let data1 = [
 
     },
     {
+        id:2,
         logo:"https://i.ibb.co/Qn7hYDg/Screenshot-69.png",
         package:"PACKAGE",
-        Name:"Wax & Glow",
+        Name:"Glow Better",
         star:"https://i.ibb.co/2j8F3SL/Screenshot-56.png",
-        rating:"4.79 (248.5K)",
-        price:1795,
-        time:"2 hrs 35 mins",
+        rating:"4.79 (315.5K)",
+        price:1047,
+        time:"1 hrs 50 mins",
+        line1:"Crave beauty dazzling diamond facial",
+        line2:"Upper lip threading",
+        line3:"Eyebrow threading",
+
+    },
+    {
+        id:3,
+        logo:"https://i.ibb.co/Qn7hYDg/Screenshot-69.png",
+        package:"PACKAGE",
+        Name:"Mani-pedi special",
+        star:"https://i.ibb.co/2j8F3SL/Screenshot-56.png",
+        rating:"4.77 (288.9K)",
+        price:896,
+        time:"1 hrs 50 mins",
+        line1:"Delux manicure(4-step)",
+        line2:"Upper lip threading",
+        line3:"Delux pedicure(4-step)",
+
+    },
+    {
+        id:4,
+        logo:"https://i.ibb.co/Qn7hYDg/Screenshot-69.png",
+        package:"PACKAGE",
+        Name:"Complete chocolate waxing",
+        star:"https://i.ibb.co/2j8F3SL/Screenshot-56.png",
+        rating:"4.78 (308K)",
+        price:596,
+        time:"1 hrs 15 mins",
         line1:"Full arms (chocolate) + underarms (honey)",
+        line2:"Upper lip threading",
+        line3:"Eyebrow threading",
+
+    },
+    {
+        id:5,
+        logo:"https://i.ibb.co/Qn7hYDg/Screenshot-69.png",
+        package:"PACKAGE",
+        Name:"Complete honey waxing",
+        star:"https://i.ibb.co/2j8F3SL/Screenshot-56.png",
+        rating:"4.78 (359.9K)",
+        price:396,
+        time:"1 hrs 10 mins",
+        line1:"Full legs honey",
         line2:"Full legs Chocolate",
         line3:"Crave beauty dazzling diamond facial",
 
     }
 ]
-
-
+let carttotal=document.querySelector("#carttotal")
+let Added= JSON.parse(localStorage.getItem("cart"))||[]
 function showservice (data){
-      
+    
+    carttotal.textContent="₹"+Added.reduce((a,b)=>{
+        return a+Number(b.price)*(b.quantity);
+    },0)
       data.forEach(elem => {
 
         let div = document.createElement("div")
@@ -65,6 +112,19 @@ function showservice (data){
 
         let btn = document.createElement("button")
         btn.innerText="Add"
+        btn.setAttribute("id","opacity")
+        btn.addEventListener("click",function(){
+                
+            let Added=JSON.parse(localStorage.getItem("cart"))||[]
+            for(i=0;i<Added.length;i++){
+             if(Added[i].id==elem.id){
+                 return;
+             }
+            }
+            Added.push({...elem,quantity:1});
+             localStorage.setItem("cart",JSON.stringify(Added))
+             
+           })
 
         let hr2 = document.createElement("hr")
 
@@ -77,12 +137,11 @@ function showservice (data){
 
 showservice(data1)
 
-
-
-
 document.querySelector("#openpopup").addEventListener("click",function(){
     document.querySelector(".popup").style.display="flex";
+    document.querySelector("#opacity").style.opacity=0
 })
 document.querySelector(".close").addEventListener("click",function(){
     document.querySelector(".popup").style.display="none";     
+    document.querySelector("#opacity").style.opacity=1
 })
